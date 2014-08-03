@@ -75,7 +75,7 @@
 		var alt = '(' + u.strings.join('|') + ')';
 		var regex, str;
 
-		regex = '(\\d+(?:[.,]\\d+)?) ' + alt;
+		regex = '(\\d+(?:[.,]\\d+)?) ' + alt + '\\b';
 		regex = new RegExp(regex, 'gi');
 
 		str = e.text();
