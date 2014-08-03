@@ -61,6 +61,12 @@
 			quotient: 12.7,
 			strings: ['quarters', 'quarter', 'qr'],
 			target: 'kg'
+		},
+		'F': {
+			quotient: 0.556,
+			offset: -32,
+			strings: ['Fahrenheit', 'F', '\xB0F'],
+			target: '\xB0C'
 		}
 	};
 
@@ -75,7 +81,8 @@
 		str = e.text();
 		str = str.replace(regex, function (match, val) {
 			imperial = parseFloat(val);
-			metric = Math.round(imperial * u.quotient * 100) / 100;
+			var offset = u.hasOwnProperty('offset') ? u.offset : 0;
+			metric = Math.round((imperial + offset) * u.quotient * 100) / 100;
 			return match + ' (' + metric + ' ' + u.target + ')';
 		});
 		e.text(str);
