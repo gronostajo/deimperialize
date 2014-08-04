@@ -54,7 +54,7 @@
 		},
 		'lb': {
 			quotient: 0.454,
-			strings: ['pounds', 'pound', 'lb'],
+			strings: ['pounds', 'pound', 'lbs', 'lb'],
 			target: 'kg'
 		},
 		'qr': {
