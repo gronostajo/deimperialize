@@ -65,7 +65,7 @@
 		'F': {
 			quotient: 0.556,
 			offset: -32,
-			strings: ['Fahrenheit', 'F', '\xB0F'],
+			strings: ['Fahrenheit', 'deg F', '\xB0F', 'F'],
 			target: '\xB0C'
 		}
 	};
